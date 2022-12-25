@@ -1,4 +1,4 @@
-import { IMovie } from '../dto/MoviesDTO.js';
+import { IMovies } from '../dto/MoviesDTO.js';
 import MovieRepository from '../repositories/MovieRepository';
 
 class MovieService {
@@ -7,7 +7,7 @@ class MovieService {
         this.movieRepository = new MovieRepository();
     }
 
-    async create(data: IMovie) {
+    async create(data: IMovies[]) {
         const movies = await this.movieRepository.create(data);
         return movies;
     }

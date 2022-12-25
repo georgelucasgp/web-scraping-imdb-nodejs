@@ -1,8 +1,10 @@
-export interface IMovie {
-    title: string;
-    description: string;
-    genres: string;
-    stars: string;
-    votes: string;
-    year: string;
+export class IMovies {
+    constructor(
+        public title?: string,
+        public description?: string,
+        public genres?: string,
+        public stars?: string,
+        public votes?: string,
+        public year?: string
+    ) {}
 }
